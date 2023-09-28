@@ -13,5 +13,7 @@ kosten_stokbroden = STOKBRODEN * AANTAL_STOKBRODEN
 kortingsbonnen = KORTINGSBON * AANTAL_KORTINGSBONNEN
 
 total = kosten_croissantjes + kosten_stokbroden - kortingsbonnen
-print(total)
+
+print(f'de feestlunch kost je bij de bakker {total} euro voor {AANTAL_CROISSANTJES} en {AANTAL_STOKBRODEN} als de {AANTAL_KORTINGSBONNEN} kortingsbonnen nog geldig zijn  ')
+
 
