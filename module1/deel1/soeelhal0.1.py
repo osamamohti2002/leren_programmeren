@@ -11,12 +11,3 @@ gameseat_kosten = (aantal_minuten / gameseat_per_minuten) * GAMESEAT * aantal_pe
 total = ticket_kosten + gameseat_kosten
 print(f'een gewldige dagje met {aantal_personen} mensen in de speelhal met {aantal_minuten} minuten VR kost je maar {total.__round__(1)} euro')
 
-def som(
-    
-):
-    a = 3
-    b =5 
-    return a , b
-
-total = a + b 
-print(total)
