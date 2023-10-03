@@ -16,9 +16,12 @@
 PIZZA_PRIJZEN = {'PIZZA_GROOT': 14.99 , 'PIZZA_MEDUIM' : 11.99 , 'PIZZA_KLEIN' : 8.99 }
 print(f'dit zijn onze prijzen en pizza maten {PIZZA_PRIJZEN}')
 
-#aantal pizza's die de gebruiker moet kiezen
+
+# wihle True om te zorgen dat als een fout melding wordt opgevangen dan de vragen opnieuw worden gesteld
 while True:
+# try om te zorgen dat er geen fout meldingen in dit progrqmma worden gemaakt
     try:
+# aantal pizza's die de gebruiker moet kiezen
         aantal_pizza_groot = float(input("Hoeveel grote pizza's wilt u hebben?"))
         aantal_pizza_meduim = float(input("Hoeveel medium pizza's wilt u hebben?"))
         aantal_pizza_klein = float(input("Hoeveel kleine pizza's wilt u hebben?"))
