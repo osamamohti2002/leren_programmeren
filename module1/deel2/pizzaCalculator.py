@@ -40,4 +40,4 @@ while True:
         print('     -' * 30)
 
     except ValueError:
-        print('voer het aantal in cijfer in ')
+        print('voer het aantal in cijfers in ')
