@@ -1,14 +1,24 @@
-getal_1 = int(input('voer getal 1 in '))
-getal_2 = int(input('voer getal 2 in'))
+a = int(input('voer a in '))
+b = int(input('voer b in'))
 
-if getal_1 > getal_2 :
-    max = getal_1
-    print(f'getal 1 is het het grootset getal , {getal_1} ')
-    print(max)
+if a > b :
+    maximum = a
+    print(f'a is het het grootset getal , {maximum} ')
+    minimum = b
+    print(f'het minimum is {minimum}')
+    print(f'het maximum is {maximum}')
 
-elif getal_1 < getal_2:
-    min = getal_1
-    print(f'{getal_1} is de kleinste getal , {getal_1}')
+
+elif a < b :
+    minimum = a
+    print(f'a is de kleinste getal , {minimum}')
+    maximum = b
+    print(f'het minimum is {minimum}')
+    print(f'het maximum is {maximum}')
 
 else:
-    print('getal 1 en getal 2 zijn even groot')
+    print('a en b zijn even groot')
+    minimum = a
+    maximum = b
+    print(minimum)
+    print(maximum)
