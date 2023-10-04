@@ -3,7 +3,12 @@ getal_2 = int(input('voer getal 2 in'))
 
 if getal_1 > getal_2 :
     max = getal_1
-    print(f'{getal_1} is het het grootset getal gevolgd door de waarde van max ')
+    print(f'getal 1 is het het grootset getal , {getal_1} ')
     print(max)
+
+elif getal_1 > getal_2:
+    min = getal_1
+    print(f'{getal_1} is de kleinste getal , {getal_1}')
+    
 else:
     print('getal b is groter')
