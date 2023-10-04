@@ -10,8 +10,8 @@
 
 
 #prijzen
-toegangsticket = float(input('hoeveel kost een toegangsticket?'))
-gameseat = float(input('hoeveel kost het per 5 minuten?'))
+toegangsticket = int(float(input('hoeveel kost een toegangsticket?')) * 100) 
+gameseat = int(float(input('hoeveel kost het per 5 minuten?')) * 100)
 
 
 #aantalen
