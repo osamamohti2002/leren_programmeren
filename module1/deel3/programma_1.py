@@ -6,9 +6,9 @@ if getal_1 > getal_2 :
     print(f'getal 1 is het het grootset getal , {getal_1} ')
     print(max)
 
-elif getal_1 > getal_2:
+elif getal_1 < getal_2:
     min = getal_1
     print(f'{getal_1} is de kleinste getal , {getal_1}')
-    
+
 else:
-    print('getal b is groter')
+    print('getal 1 en getal 2 zijn even groot')
