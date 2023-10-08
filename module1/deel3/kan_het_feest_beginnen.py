@@ -1,19 +1,8 @@
-gastheer = input('')
-gasten = False
-drank = True
-chips = True
-
-if gastheer and drank and gasten :
+gastheer = 0
+gasten = 1
+drank = 1
+chips = 1
+if gasten or gastheer or (chips and drank):
     print('Start the Party')
-elif gastheer and drank:
-    print('Start the Party')
-elif gastheer and gasten:
-    print('Start the Party')
-elif gastheer and chips:
-    print('Start the Party')
-elif gastheer and gasten and chips:
-    print('Start the Party')
-
-
 else:
     print('No Party')
