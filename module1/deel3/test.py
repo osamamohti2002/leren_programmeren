@@ -1,6 +1,6 @@
 def start_the_party(gastheer, gasten, drank, chips):
     start = 'No Party'
-    if (gastheer or gasten and (chips and drank)):
+    if ((gasten and chips and drank) or (gastheer and drank)):
         start = 'Start the Party'
     return start
 
