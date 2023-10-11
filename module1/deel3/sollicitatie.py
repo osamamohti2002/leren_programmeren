@@ -83,5 +83,5 @@ else:
         niet_voldane_criteria.append("U heeft korter haar dan wat wij vragen. ")
     if not (GLIMLACH_LANGTE >= 10):
         niet_voldane_criteria.append("U glimlach is korter dan wat wij vragen. ")
-        
+
     print(niet_voldane_criteria)
