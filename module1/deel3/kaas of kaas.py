@@ -1,4 +1,4 @@
-hantwoord_1 = input('Is de kaas geel?')
+antwoord_1 = input('Is de kaas geel?')
 
 if antwoord_1 == 'ja':
     gaten = input('zitten er gaten in?')

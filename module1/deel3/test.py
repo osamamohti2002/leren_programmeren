@@ -51,3 +51,6 @@ if start_the_party(False, True, True, True) == 'Start the Party':
     print('geslaagd')
 else:
     print('Je conditie klopt niet')
+
+
+
