@@ -8,6 +8,8 @@ if antwoord_1 == 'ja':
             print('emmenthaler')
         elif belachelijk == 'nee':
             print('leerdammer')
+        else:
+            print('ongeldige invoer')
     elif gaten == 'nee':
         steen = input('is de kaas hard als steen')
         if steen == 'ja':

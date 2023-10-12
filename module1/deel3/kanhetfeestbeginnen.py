@@ -1,7 +1,7 @@
-gastheer = True
-gasten = False
-drank = False
-chips = False
+gastheer = 0
+gasten = 1
+drank = 1
+chips = 1
 
 if (gasten and chips and drank) or (gastheer and drank) or gastheer or gasten:
     print('Start the Party')

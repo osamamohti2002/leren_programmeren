@@ -64,28 +64,15 @@ competentie_stelling_3 = int(input(COMPETENTIE_STELLING_3))
 competentie_stelling_4 = int(input(COMPETENTIE_STELLING_4))
 competentie_stelling_5 = int(input(COMPETENTIE_STELLING_5))
 
-
-scoor = (
-    (competentie_stelling_1 + competentie_stelling_2 + competentie_stelling_3 + competentie_stelling_4
-    + competentie_stelling_5 + competentie_stelling_6 + competentie_stelling_7) / GEMIDDELD
-)
-
 # Provide advice based on the score
-if scoor <= ZORGELIJK:
-    print(COMPETENTIE_ADVIES_ZORGELIJK)
 
-elif scoor <= TWIJFELACHTIG:
-    print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
-else:
-    print(COMPETENTIE_ADVIES_GERUSTSTELLEND)
+antwoorden = [competentie_stelling_1, competentie_stelling_2, competentie_stelling_3, competentie_stelling_4, competentie_stelling_5, competentie_stelling_6, competentie_stelling_7]
 
-
-# ... (je bestaande code blijft hier)
 
 # Tellen van het aantal antwoorden 'altijd', 'vaak' en 'regelmatig'
-aantal_altijd = sum(answer <= VAAK for answer in [competentie_stelling_1, competentie_stelling_2, competentie_stelling_3, competentie_stelling_4, competentie_stelling_5, competentie_stelling_6, competentie_stelling_7])
-aantal_vaak = sum(answer == VAAK for answer in [competentie_stelling_1, competentie_stelling_2, competentie_stelling_3, competentie_stelling_4, competentie_stelling_5, competentie_stelling_6, competentie_stelling_7])
-aantal_regelmatig = sum(answer == REGELMATIG for answer in [competentie_stelling_1, competentie_stelling_2, competentie_stelling_3, competentie_stelling_4, competentie_stelling_5, competentie_stelling_6, competentie_stelling_7])
+aantal_altijd = sum(answer == ALTIJD for answer in antwoorden)
+aantal_vaak = sum(answer == VAAK for answer in antwoorden)
+aantal_regelmatig = sum(answer == REGELMATIG for answer in antwoorden)
 
 # Berekenen van de gemiddelde score
 gemiddelde_score = (

@@ -1,7 +1,7 @@
 a = int(input('voer a in '))
 b = int(input('voer b in'))
 
-if a > b :
+if a > b:
     maximum = a
     print(f'a is het het grootset getal , {maximum} ')
     minimum = b
@@ -9,7 +9,7 @@ if a > b :
     print(f'het maximum is {maximum}')
 
 
-elif a < b :
+elif a < b:
     minimum = a
     print(f'a is de kleinste getal , {minimum}')
     maximum = b
