@@ -1,0 +1,2 @@
+lithe = 'eri'
+print(lithe)
