@@ -1,2 +1,0 @@
-lithe = 'eri'
-print(lithe)

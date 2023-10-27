@@ -31,15 +31,6 @@ if (vrachtwagen_rijbewijs == 'ja'
     and (dieren_dressuur >= 4 or jongleren >= 5 or acrobatiek >= 3)
 ):
     print('Gefeliciteerd je komt in aanmerking voor deze functie ')
-# elif (
-#         vrachtwagen_rijbewijs == 'ja'
-#         and hoed == 'ja'
-#         and (gewicht >= MIN_GEWICHT and gewicht <= MAX_GEWICHT)
-#         and (langte >= MIN_LANGTE and langte <= MAX_LANGTE)
-#         and certificaat == 'ja'
-#         and jongleren >= 5 or acrobatiek >= 3
-# ):
-#     print('Gefeliciteerd je komt in aanmerking voor deze functie')
 
 else:
     print('u voldoet niet aan onze strenge eizen voor de functie Circusdirecteur, Helaas het spijt ons ')

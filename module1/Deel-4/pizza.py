@@ -4,7 +4,6 @@
 
 def vraag_aantal(pizza_soort):
     while True:
-        print("uitgevoerd")
         try:
             aantal = float(input(f"Hoeveel {pizza_soort} pizza's wilt u bestellen? "))
             if aantal < 0:
@@ -33,7 +32,7 @@ kosten_medium = aantal_medium * PIZZA_PRIJZEN["medium"]
 kosten_klein = aantal_klein * PIZZA_PRIJZEN["klein"]
 totaal_prijs = kosten_groot + kosten_medium + kosten_klein
 
-# dat is de bonnetje van de bestelde pizza van de gebruiker
+# Hier wordt een bontje uitgeprint
 print("======= UW Bestelling=======")
 print(f"{aantal_groot} x groot pizza's: € {kosten_groot}")
 print(f"{aantal_medium} x medium pizza': € {kosten_medium}")

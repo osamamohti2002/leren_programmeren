@@ -1,9 +1,9 @@
-a = input('Geef een woord: ')
-b = input('Geef nog een woord: ')
+a = len(input('Geef een woord: '))
+b = len(input('Geef nog een woord: '))
 
-if len(a) > len(b):
+if a > b:
     print('Woord a heeft meer letters dan woord b')
-elif len(a) < len(b):
+elif a < b:
     print('Woord a heeft minder letters dan woord b')
 else:
     print('Woord a en woord b hebben evenveel letters')
