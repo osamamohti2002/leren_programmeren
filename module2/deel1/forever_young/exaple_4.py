@@ -13,6 +13,7 @@ for i in range(5):
         robotArm.moveLeft()
 
 
+#dit is een onnodige beweging
 for i in range(2):
     robotArm.moveRight()
 
