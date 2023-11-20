@@ -1,39 +1,53 @@
-# aantal_lijstjes = int(input("Voer het aantal lijstjes in: "))
+# lijst = int(input('aantal'))
+# LIJST = []
+# for item in range(lijst):
+#     langte = int(input('langte'))
+#     LIJST.append(item)
+#
+#     print(LIJST)
+#
+main_lijst = []
+aantal_lijsten = int(input('hoe veel lijsten'))
+
+for lijst in range(aantal_lijsten):
+    langte = int(input(f'hoe veel elementen moet er in {lijst}'))
+    main_lijst.append(lijst)
+    # print(lijst)
+    # print(main_lijst)
+    for i in range(langte):
+        lijst = []
+        lijst.append(langte)
+        print(lijst)
+    main_lijst.append(lijst)
+
+
+print(main_lijst)
+
+
+
+
+# for lijst in range(0, aantal_lijsten):
+#     print(main_lijst)
+#     elements = int(input('voeg je elements toe'))
+#     main_lijst.append(elements)
+#
+# print(main_lijst)
+# print(len(main_lijst))
 #
 #
-# lijst = []
-# for i in range(aantal_lijstjes):
-#     langte = int(input('wat is de langte van je lijst'))
-#     gegenereerde_lijst = list(range(i, (i * langte) + 1))
-#     lijst.append(gegenereerde_lijst)
-#     print(lijst)
+
+
+# main_lijst = []
+# aantal_lijsten = int(input('Hoeveel lijsten: '))
 #
-# for i, lijst in enumerate(lijst, start=1):
-#     print(f"Lijstje {i}: {lijst}")
+# for lijst_index in range(aantal_lijsten):
+#     lengte = int(input(f'Hoeveel elementen moeten er in lijst {lijst_index}: '))
+#     inner_list = []
 #
-
-
-# lijst.append(langte)
-# print(lijst)
-
-aantal_lijstjes = int(input("Voer het aantal lijstjes in: "))
-
-
-lijst = []
-for i in range(aantal_lijstjes * 1):
-    langte = int(input('wat is de langte van je lijst'))
-    lijst.append(langte)
-    print(lijst)
-for i in lijst:
-    print(i)
-
-
-
-
-
-
-# for i in lijst:
-#     print(i)
-# stap 2 for loop maken en lengtes vragen -> list
-# stap 3 for elke iests in in de list
-#stap 4 de gegenereerde  langte toevoegen aan de gegenereerde  lijsten
+#     for i in range(lengte):
+#         element = input(f'Geef element voor lijst {lijst_index}: ')
+#         inner_list.append(element)
+#
+#     main_lijst.append(inner_list)
+#
+# print(main_lijst)
