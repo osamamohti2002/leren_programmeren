@@ -22,20 +22,26 @@
 #
 #
 # print(main_lijst)
-main_lijst = []
-aantal_lijsten = int(input('hoeveel lijsten'))
-for lijst in range(aantal_lijsten):
-    langte = int(input(f'hoe lang is list {lijst + 1} '))
-    genereerd_lijst = []
-    # print(len(genereerd_lijst))
-    # main_lijst.append(genereerd_lijst)
-    # print(main_lijst)
-    for ele in range( langte):
-        element = lijst * ele
-        genereerd_lijst.append(element)
-    main_lijst.append(genereerd_lijst)
-    print(genereerd_lijst)
-print(main_lijst)
+
+
+
+# main_lijst = []
+# aantal_lijsten = int(input('hoeveel lijsten'))
+# for lijst in range(aantal_lijsten):
+#     langte = int(input(f'hoe lang is list {lijst + 1} '))
+#     genereerd_lijst = []
+#     # print(len(genereerd_lijst))
+#     # main_lijst.append(genereerd_lijst)
+#     # print(main_lijst)
+#     for ele in range( langte):
+#         element = lijst * ele
+#         genereerd_lijst.append(element)
+#     main_lijst.append(genereerd_lijst)
+#     print(genereerd_lijst)
+# print(main_lijst)
+
+
+
 
 # for lijst in range(0, aantal_lijsten):
 #     print(main_lijst)
@@ -61,3 +67,14 @@ print(main_lijst)
 #     main_lijst.append(inner_list)
 #
 # print(main_lijst)
+
+
+aantal_lijsten = int(input("Voer het aantal lijstjes in: "))
+lege_lijst =[]
+for lijst in range(1, aantal_lijsten + 1):
+    lengte_lijst = int(input(f"Voer de lengte in voor lijst {lijst}: "))
+
+    lijstje = list(range(1, lengte_lijst * lijst + 1, lijst))
+    lege_lijst.append(lijstje)
+    print(f"Lijst {lijst}: {lijstje}")
+print(lege_lijst)
