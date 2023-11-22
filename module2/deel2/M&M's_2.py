@@ -11,8 +11,7 @@ for _ in range(aantal_m_en_ms):
 
 print("Het aantal M&M's in je zak")
 for kleur, aantal in zak.items():
-    if aantal > 0:
-        print(f'{kleur} : {aantal}')
+    print(f'{kleur} : {aantal}')
 
 
 # import random
