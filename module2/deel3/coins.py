@@ -1,43 +1,40 @@
-
 # naam student: Osama Mohti
 # studentnummer: 99078852
-# doel van het programma:
+# doel van het programma: 
 # functie van het programma:
 # structuur van het programma:
 
-teBetalenBedrag = int(float(input('Te betalen bedrag: ')) * 100)
-betaaldBedrag = int(float(input('Betaald bedrag: ')) * 100)
-wisselgeld = betaaldBedrag - teBetalenBedrag
-
+te_betalen_bedrag = int(float(input('Te betalen bedrag: ')) * 100)
+betaald_bedrag = int(float(input('Betaald bedrag: ')) * 100)
+wisselgeld = betaald_bedrag - te_betalen_bedrag
 if wisselgeld > 0:
-    muntWaarde = 50
-
-    while wisselgeld > 0 and muntWaarde > 0:
-        aantalMunten = wisselgeld // muntWaarde
-
-        if aantalMunten > 0:
-            print('Geef maximaal', aantalMunten, 'munt(en) van', muntWaarde, 'cent terug!')
-            aantalTeruggegevenMunten = int(
-                input('Hoeveel munten van ' + str(muntWaarde) + ' cent heb je teruggegeven? '))
-            wisselgeld -= aantalTeruggegevenMunten * muntWaarde
-
-
-
-
-        if muntWaarde == 50:
-            muntWaarde = 20
-        elif muntWaarde == 20:
-            muntWaarde = 10
-        elif muntWaarde == 10:
-            muntWaarde = 5
-        elif muntWaarde == 5:
-            muntWaarde = 2
-        elif muntWaarde == 2:
-            muntWaarde = 1
+    munt_waarde = 500
+    while wisselgeld > 0 and munt_waarde > 0:
+        aantal_munten = wisselgeld // munt_waarde
+        if aantal_munten > 0:
+            print(f'Geef maximaal {aantal_munten} munt(en) van {munt_waarde / 100} euro terug!')
+            aantal_teruggegeven_munten = int(
+                input(f'Hoeveel munten van {munt_waarde / 100} euro heb je teruggegeven? '))
+            wisselgeld -= aantal_teruggegeven_munten * munt_waarde
+        if munt_waarde == 500:
+            munt_waarde = 200
+        elif munt_waarde == 200:
+            munt_waarde = 100
+        elif munt_waarde == 100:
+            munt_waarde = 50
+        elif munt_waarde == 50:
+            munt_waarde = 20
+        elif munt_waarde == 20:
+            munt_waarde = 10
+        elif munt_waarde == 10:
+            munt_waarde = 5
+        elif munt_waarde == 5:
+            munt_waarde = 2
+        elif munt_waarde == 2:
+            munt_waarde = 1
         else:
-            muntWaarde = 0
-
+            munt_waarde = 0
 if wisselgeld > 0:
-    print('Wisselgeld niet teruggegeven: ', str(wisselgeld) + ' cent')
+    print(f'Wisselgeld niet teruggegeven: {wisselgeld / 100} euro')
 else:
-    print('klaar')
+    print('Klaar')
