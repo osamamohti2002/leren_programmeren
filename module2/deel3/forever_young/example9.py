@@ -12,6 +12,3 @@ for aantalblokjes in range(1, 5): #stapel`
             robotArm.moveLeft()
 
 robotArm.wait()
-
-
-
