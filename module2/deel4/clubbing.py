@@ -20,6 +20,7 @@ if leeftijd > 18:
     else:
         if leeftijd >= 21:
             print('je krijgt van mij een stempeltje')
+            drank = input('wat wil je drinken')
         else:
             drank = input('wat wil je drinken')
 
