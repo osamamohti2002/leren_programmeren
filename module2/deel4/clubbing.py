@@ -34,22 +34,24 @@ if leeftijd > 18:
             if naam in VIP_LIST and leeftijd >= 21:
                 print(BERICHT_1)
             elif leeftijd >= 21:
-                    print(BERICHT_2, PRIJS_BIER)
+                print(BERICHT_2, PRIJS_BIER)
             else:
                 print(BERICHT_3)
-                leeftijd_berkenen = 21 - leeftijd
+                leeftijd_berkenen = 21 - leeftijd                       
                 print(f'probeer over {leeftijd_berkenen} jaar nog eens')
         if drank == 'champagne':
             if naam in VIP_LIST and leeftijd >= 21:
                 print(BERICHT_2, PRIJS_CHAMPAGNE)
             elif naam in VIP_LIST:
                 print(BERICHT_3)
+                leeftijd_berkenen = 21 - leeftijd
+                print(f'probeer over {leeftijd_berkenen} jaar nog eens')
             else:
                 print("Sorry alleen vips mogen champagne bestellen")
     else:
         print('Sorry geen idee wat je bedoeld, hier een glasje water')
 else:
     print('Sorry je mag niet naar binnen')
-    leeftijd_berkenen = 19 -leeftijd
+    leeftijd_berkenen = 19 - leeftijd
     print(f'probeer over {leeftijd_berkenen} jaar nog eens')
 print("Einde programma")
