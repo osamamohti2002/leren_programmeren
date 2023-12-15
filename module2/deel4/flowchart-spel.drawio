@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net" modified="2023-12-14T13:43:03.693Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="eE6g5TD1WTB5deKUr5bz" version="22.1.8" type="device">
+  <diagram name="Pagina-1" id="80_aTMoOErlhEXatL1sE">
+    <mxGraphModel dx="857" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RKqnW8_ZUhHQGfOGpwQm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RKqnW8_ZUhHQGfOGpwQm-1" target="RKqnW8_ZUhHQGfOGpwQm-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RKqnW8_ZUhHQGfOGpwQm-1" value="Start het programma" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="354" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-1" value="Fals" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RKqnW8_ZUhHQGfOGpwQm-3" target="sbrlWb4rdxiYxrlJIUAO-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-3" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RKqnW8_ZUhHQGfOGpwQm-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RKqnW8_ZUhHQGfOGpwQm-3" value="Wil je spellen?&lt;br&gt;(ja/ stop)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="338" y="120" width="152" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-2" value="Einde programma!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-4" target="sbrlWb4rdxiYxrlJIUAO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-4" value="int(input(&#39;Raad 20 getallen&amp;nbsp;&lt;br&gt;tussen 1 en 1000" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="115" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-7" value="Fals" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-5" target="sbrlWb4rdxiYxrlJIUAO-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-8" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-5" value="Geraden?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="245" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-10" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-9" target="sbrlWb4rdxiYxrlJIUAO-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-12" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-9" target="sbrlWb4rdxiYxrlJIUAO-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="555" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-9" value="lager dan&lt;br&gt;50?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="192.5" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-11" value="Je bent warm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-14" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-13" target="sbrlWb4rdxiYxrlJIUAO-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="420" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-27" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-13" value="Hoger dan&lt;br&gt;20?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-15" value="Je bent heel warm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-16" target="sbrlWb4rdxiYxrlJIUAO-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-16" value="Goed gedaan je hebt&lt;br&gt;{x} ronds over" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="420" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-19" target="sbrlWb4rdxiYxrlJIUAO-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-19" value="Jouw score is {x}&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="667.5" y="525" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-28" target="sbrlWb4rdxiYxrlJIUAO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-28" value="Je hebt {X} keer voor dat ronde afsluit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="435" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-34" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-32" target="sbrlWb4rdxiYxrlJIUAO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-35" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="sbrlWb4rdxiYxrlJIUAO-32" target="RKqnW8_ZUhHQGfOGpwQm-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbrlWb4rdxiYxrlJIUAO-32" value="score == 20?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
