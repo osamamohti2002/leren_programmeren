@@ -32,6 +32,3 @@ for ronde in range(1, 21):
         print('je bent legend je hebt alles geraden')
         print(f'je scoor {scoor}')
         break
-
-
-

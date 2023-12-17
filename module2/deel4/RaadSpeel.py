@@ -1,67 +1,50 @@
-import random
-
-
-# ronde = 0
-# scoor = 0
-
-# while scoor < 20:
-#     getal_raden = int(input('raad een getal tussen 1 en 1000'))
-#     getal = random.randint(1, 1000)
-#     if getal_raden == getal:
-#         print(getal_raden)
-#         stoppen = input('wil je door gaan?')
-#         if stoppen != 'ja':
-#             continue
-#         else:
-#             break
-#
-#     else:
-#         print(getal)
-#
-#
-
-# while scoor < 20:
-#     geraden_getal = int(input('raad een getal tussen 1 en 1000'))
-#     getal = 100
-#     if geraden_getal == getal:
-#         ronde += 1
-#         scoor += 1
-#         print(f'goed gedaan je hebt nu in ronde {ronde} en je scoor is {scoor}')
-#         print(getal)
-#     else:
-#         warm = getal - geraden_getal
-#         if warm <= 50:
-#             print('je bent warm')
-#             print(getal)
-#         elif warm >= 20:
-#             print('je bent heel warm')
-#             print(getal)
-#         print(getal)
-
 
 import random
 
-geheim_getal = 1
-score = 0
-ronde = 0
-for ronde in range(1, 21):
-    gok = int(input("Raad een getal tussen 1 en 1000: "))
-    verschil = abs(geheim_getal - gok)
-    if verschil < 20:
-        print("Je bent heel warm")
-    elif verschil < 50:
-        print("Je bent warm")
-    elif gok == geheim_getal:
-        print("Gefeliciteerd, je hebt het geraden!")
-        score += 1
-        print(score)
-        break
-    elif gok < geheim_getal:
-        print("Hoger")
+scoor = 0
+rondes = 20
+poging = 10
+
+while rondes > 0:
+    geheime_getal = random.randint(1, 1000)
+    while poging > 0:
+        gok = int(input('gok een getal'))
+        print(geheime_getal)
+        verschil = abs(geheime_getal - gok)
+        if gok == geheime_getal:
+            scoor += 1
+            rondes -= 1
+            poging -= 10
+            print(f'je hebt de eerste ronde gewonnen {scoor}')
+            print(poging)
+        elif verschil < 20:
+            poging -= 1
+            print(poging)
+            print('je bent heel warm')
+        elif verschil < 50:
+            poging -= 1
+            print(poging)
+            print('je bent warm')
+        elif gok < geheime_getal:
+            poging -= 1
+            print(poging)
+            print('hoger')
+        else:
+            poging -= 1
+            print(poging)
+            print('lager')
     else:
-        print("Lager")
-    print(geheim_getal)
-    ronde += 1
-    print(ronde)
+        print('je hebt de eerste ronde verloren')
+        rondes -= 1
+        print(f'de geheime getal was {geheime_getal}')
+        opnieuw = input('wil je stoppen')
+        poging += 10
+        if opnieuw == 'ja':
+            break
+    if rondes == 0:
+        print('je hebt de 20 rondes gewoneen je bent een lagend')
 
-print(f"\nScore na {ronde} ronden: {score}")
+        # else:
+        #     print('fuck')
+    # print('einde ')
+
