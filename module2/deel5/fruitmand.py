@@ -35,6 +35,4 @@ fruitmand = [{
     'round': True
 }]
 
-for i in fruitmand:
-    print(i)
 

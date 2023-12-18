@@ -52,20 +52,38 @@
 # output2 = add_length(zin)
 # print(output2)
 
-def add_length(zin):
-    woorden = zin.split()
-    lijst = []
-    for woord in woorden:
-        element = f"{woord} {len(woord)}"
-        lijst.append(element)
+# def add_length(zin):
+#     woorden = zin.split()
+#     lijst = []
+#     for woord in woorden:
+#         element = f"{woord} {len(woord)}"
+#         lijst.append(element)
+#
+#     return lijst
+#
+# # Voorbeeldgebruik:
+# input_str1 = "appel banaan"
+# output1 = add_length(input_str1)
+# print(output1)
+#
+# input_str2 = "jij zult winnen"
+# output2 = add_length(input_str2)
+# print(output2)
 
-    return lijst
 
-# Voorbeeldgebruik:
-input_str1 = "appel banaan"
-output1 = add_length(input_str1)
-print(output1)
+def same_case(a, b):
+    if (a.islower() and b.islower()) or (a.isupper() and b.isupper()):
+        return(1)
+    elif (a.islower() and b.isupper()) or (a.isupper() and b.islower()):
+        return(0)
+    else:
+        return(-1)
 
-input_str2 = "jij zult winnen"
-output2 = add_length(input_str2)
-print(output2)
+result = same_case('A', 'a')
+print(result)
+
+result = same_case('A', 'b')
+print(result)
+
+result = same_case('1', '?')
+print(result)
