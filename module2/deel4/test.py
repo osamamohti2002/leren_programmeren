@@ -22,7 +22,8 @@ if leeftijd > 18:
     drank = input('wat wil je drinken')
     if (drank == 'cola' and naam in VIP_LIST) or (drank == 'bier' and (leeftijd >= 21 and naam in VIP_LIST)):
         print('Alstublieft, complimenten van het huis')
-    elif (drank == 'cola' and naam not in VIP_LIST) or (drank == 'bier' and (leeftijd >= 21 and naam not in VIP_LIST)) or (drank == 'champagne' and leeftijd >= 21 and naam in VIP_LIST):
+    elif (drank == 'cola' and naam not in VIP_LIST) or (drank == 'bier' and (leeftijd >= 21 and naam not in VIP_LIST)) or\
+            (drank == 'champagne' and leeftijd >= 21 and naam in VIP_LIST):
         if drank == 'cola':
             prijs = PRIJS_COLA
         elif drank == 'bier':
