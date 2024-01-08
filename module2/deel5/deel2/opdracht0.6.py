@@ -1,5 +1,4 @@
-from fruitmand import fruitmand
-
+from fruitmand2 import fruitmand
 
 for fruit in fruitmand:
     if fruit['name'] == 'appel':

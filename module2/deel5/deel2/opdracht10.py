@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand2 import fruitmand
 
 gesorteerde_fruit_op_gewicht = sorted(fruitmand, key=lambda fruit: fruit['weight'], reverse=True)
 
