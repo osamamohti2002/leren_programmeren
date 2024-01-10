@@ -1,21 +1,19 @@
-from random import *
-
+from random import shuffle
 
 namen = ['osama', 'lithe', 'omar', 'ali']
 
-print('voer minimaal 3 namen in')
+print('Voer minimaal 3 namen in')
 while True:
-    uniqeu_naam = input('voer een naam in en geef aan wanneer je wilt stoppen met (stop)')
-    if uniqeu_naam == 'stop':
+    unieke_naam = input('Voer een naam in en typ "stop" wanneer je wilt stoppen: ')
+    if unieke_naam == 'stop':
         if len(namen) >= 3:
             break
         else:
-            print('je moet minimaal 3 namen invoeren')
-    elif uniqeu_naam not in namen:
-        namen.append(uniqeu_naam)
+            print('Je moet minimaal 3 namen invoeren')
+    elif unieke_naam not in namen:
+        namen.append(unieke_naam)
     else:
-        print('invoer ongeldig')
-
+        print('Ongeldige invoer')
 
 while True:
     lootjes = [] + namen
@@ -32,6 +30,16 @@ while True:
     else:
         print("Iemand heeft zijn/haar eigen lootje getrokken. Opnieuw proberen...")
 
-print("\nLootjes trekken gelukt! Hier is het resultaat:")
-for i in range(len(namen)):
-    print(f"{namen[i]} trekt {lootjes[i]}")
+print("\nLootjes trekken gelukt! Uitslag blijft geheim.")
+
+# Uitbreiding: Toewijzing van lootjes opvragen
+while True:
+    vraag_naam = input('Voer een naam in om de toewijzing van het lootje te zien, of typ "stop" om te eindigen: ')
+    if vraag_naam == 'stop':
+        break
+    elif vraag_naam in namen:
+        index = namen.index(vraag_naam)
+        toegewezen_naam = lootjes[index]
+        print(f"{vraag_naam} heeft lootje van {toegewezen_naam}")
+    else:
+        print('Ongeldige naam. Probeer opnieuw.')
