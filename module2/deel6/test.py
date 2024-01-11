@@ -1,45 +1,52 @@
 from random import shuffle
+import os
+import time
 
-namen = ['osama', 'lithe', 'omar', 'ali']
+namen_lijst = []
 
-print('Voer minimaal 3 namen in')
+print("Start de programma")
+
 while True:
-    unieke_naam = input('Voer een naam in en typ "stop" wanneer je wilt stoppen: ')
-    if unieke_naam == 'stop':
-        if len(namen) >= 3:
-            break
+    naam = input("Schrijf je naam in: ")
+
+    if naam.isalpha():
+        if naam not in namen_lijst:
+            namen_lijst.append(naam)
+
+            if len(namen_lijst) >= 3:
+                vraag_aantal = input("Wil je nog een naam toevoegen? Antwoord met ja/nee: ")
+                if vraag_aantal.lower() == 'ja':
+                    continue
+                else:
+                    break
         else:
-            print('Je moet minimaal 3 namen invoeren')
-    elif unieke_naam not in namen:
-        namen.append(unieke_naam)
+            print('Je hebt deze naam al toegevoegd')
     else:
-        print('Ongeldige invoer')
+        print('Voer een geldige naam in (alleen letters toegestaan).')
+
+shuffle(namen_lijst)
+
+lootjes_dict = {}
+
+for i in range(len(namen_lijst)):
+    gever = namen_lijst[i]
+    ontvanger = namen_lijst[(i + 1) % len(namen_lijst)]
+    lootjes_dict[gever] = ontvanger
+
+print("Nu zijn de lootjes geheim getrokken.")
 
 while True:
-    lootjes = [] + namen
-    shuffle(lootjes)
-
-    dubbel_check = False
-    for i in range(len(namen)):
-        if namen[i] == lootjes[i]:
-            dubbel_check = True
-            break
-
-    if not dubbel_check:
+    vraag_naam = input("Voer een naam in om het bijbehorende lootje te zien (typ 'stop' om te stoppen): ")
+    if vraag_naam.lower() == 'stop':
         break
+    elif vraag_naam in lootjes_dict:
+        print(f'{vraag_naam} trekt lootje voor {lootjes_dict[vraag_naam]}')
+        time.sleep(2)
+        os.system('cls' if os.name == 'nt' else 'clear')
     else:
-        print("Iemand heeft zijn/haar eigen lootje getrokken. Opnieuw proberen...")
+        print('Ongeldige naam, probeer opnieuw.')
 
-print("\nLootjes trekken gelukt! Uitslag blijft geheim.")
+print("Einde programma")
 
-# Uitbreiding: Toewijzing van lootjes opvragen
-while True:
-    vraag_naam = input('Voer een naam in om de toewijzing van het lootje te zien, of typ "stop" om te eindigen: ')
-    if vraag_naam == 'stop':
-        break
-    elif vraag_naam in namen:
-        index = namen.index(vraag_naam)
-        toegewezen_naam = lootjes[index]
-        print(f"{vraag_naam} heeft lootje van {toegewezen_naam}")
-    else:
-        print('Ongeldige naam. Probeer opnieuw.')
+
+

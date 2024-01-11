@@ -1,5 +1,5 @@
 from random import *
-
+import os
 
 namen = ['osama', 'lithe', 'omar', 'ali']
 
@@ -16,22 +16,25 @@ while True:
     else:
         print('invoer ongeldig')
 
+for i in range(100):
+    while True:
+        lootjes = [] + namen
+        shuffle(lootjes)
 
-while True:
-    lootjes = [] + namen
-    shuffle(lootjes)
+        dubbel_check = False
+        for i in range(len(namen)):
+            if namen[i] == lootjes[i]:
+                dubbel_check = True
+                break
 
-    dubbel_check = False
-    for i in range(len(namen)):
-        if namen[i] == lootjes[i]:
-            dubbel_check = True
+        if not dubbel_check:
             break
+        else:
+            print("Iemand heeft zijn/haar eigen lootje getrokken. Opnieuw proberen...")
 
-    if not dubbel_check:
-        break
-    else:
-        print("Iemand heeft zijn/haar eigen lootje getrokken. Opnieuw proberen...")
+    print("\nLootjes trekken gelukt! Hier is het resultaat:")
+    for i in range(len(namen)):
+        print(f"{namen[i]} trekt {lootjes[i]}")
 
-print("\nLootjes trekken gelukt! Hier is het resultaat:")
-for i in range(len(namen)):
-    print(f"{namen[i]} trekt {lootjes[i]}")
+
+
