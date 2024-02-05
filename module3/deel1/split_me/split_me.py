@@ -11,7 +11,7 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     if not str(controlegetal2).isnumeric():
         return {"Tweede controlle getal incorrect.":controlegetal2}
 
-    # Gemiddelde berekenen
+    # aantal getallen
     aantal = len(getallen)
 
     # Som van alle getallen in de lijst
@@ -51,12 +51,14 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     gesorteerde_lijst_uniek = sorted(unieke_getallen)
 
     # Tel het aantal keren dat elk uniek element voorkomt in de lijst
+    # { ==== gemaakt ==== }
     telling_elementen = {}
     for getal in getallen:
         aantalkeer = telling_elementen[getal]+1 if getal in telling_elementen else 1
         telling_elementen[getal] = aantalkeer
 
     # Getallen die deelbaar zijn door het eerste controlle getal
+    # { ==== gemaakt ==== }
     deelbaar1 = []
     for getal in unieke_getallen:
         if getal % controlegetal1 == 0:
@@ -64,6 +66,8 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     deelbaar1 = sorted(deelbaar1)
 
     # Getallen die deelbaar zijn door het tweede controlle getal
+    # { ==== gemaakt ==== }
+
     deelbaar2 = []
     for getal in unieke_getallen:
         if getal % controlegetal2 == 0:
@@ -71,15 +75,20 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     deelbaar2 = sorted(deelbaar2)
 
     # Controleer of een bepaald getallen in de lijst voorkomen
+    # { ==== gemaakt ==== }
+
     komtvoor = controlegetal1 in getallen and controlegetal2 in getallen
 
     # Vindt de posities van heteerste controle getal
+    # { ==== gemaakt ==== }
+
     posities = []
     for index, num in enumerate(getallen):
         if num == controlegetal1:
             posities.append(index)
 
     # Standaardafwijking berekenen
+    # { ==== gemaakt ==== }
     verschil_kwadraat = sum((x - gemiddelde) ** 2 for x in getallen)
     variantie = verschil_kwadraat / aantal
     standaardafwijking = math.sqrt(variantie)
