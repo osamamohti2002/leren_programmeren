@@ -8,7 +8,7 @@ def fibonacci(aantal_getallen):
     return fibonacci_reeks
 
 
-aantal = int(input("Voer het aantal gewenste getallen in de Fibonacci-reeks in: "))
+aantal = 10
 fib_result = fibonacci(aantal)
 
 print(f"De Fibonacci-reeks tot het {aantal}e getal is: {fib_result}")
