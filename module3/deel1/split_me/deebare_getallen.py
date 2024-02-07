@@ -14,7 +14,7 @@ def filter_deelbaar(getallen, controlegetal):
 
 
 getallenlijst = [16, 2, 5, 8, 12, 3, 40, 9, 16, 5, 8, 64, 33]
-controlegetal1 = 100
+controlegetal1 = 1
 deelbaar, komtvoor, posities = filter_deelbaar(getallenlijst, controlegetal1)
 print(f"Getallen deelbaar door {controlegetal1} (op volgorde): {deelbaar}")
 print(f"{controlegetal1} & {controlegetal1} komt wel voor in de lijst {komtvoor}")
