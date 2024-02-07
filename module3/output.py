@@ -1,4 +1,4 @@
-from uitbreiding_woonplaats import gegevens_verzamelen
+from data import gegevens_verzamelen
 informatie = gegevens_verzamelen()
 
 for persoon in range(len(informatie)):

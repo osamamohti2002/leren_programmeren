@@ -9,7 +9,6 @@ def name_age():
 
     return result
 
-
 result = name_age()
 print(f"{result['naam']} is {result['leeftijd']} jaar oud")
 

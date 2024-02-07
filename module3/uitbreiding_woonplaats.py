@@ -1,11 +1,12 @@
 def name_age():
     name = input('wat is je naam')
     age = int(input('wat is je leeftijd'))
-
+    city = input('waar woon je')
 
     result = {
         'naam': name,
-        'leeftijd': age
+        'leeftijd': age,
+        'city': city
     }
 
     return result
@@ -20,9 +21,8 @@ def gegevens_verzamelen():
         gegevens.append(name_age())
     return gegevens
 
-
+# ==== {in file output} ==== #
 informatie = gegevens_verzamelen()
 
 for persoon in range(len(informatie)):
-    print(f"{informatie[persoon]['naam']}is {informatie[persoon]['leeftijd']} jaar oud")
-
+    print(f"{informatie[persoon]['naam']}, die in {informatie[persoon]['city']} woont is {informatie[persoon]['leeftijd']} jaar oud")
