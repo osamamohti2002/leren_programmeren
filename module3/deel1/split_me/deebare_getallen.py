@@ -8,7 +8,7 @@ def filter_deelbaar(getallen, controlegetal):
             posities.append(index)
 
 
-    komtvoor_controlegetal = controlegetal in getallen
+    komtvoor_controlegetal = len(posities) > 0
 
     return sorted(lijst), komtvoor_controlegetal, posities
 
