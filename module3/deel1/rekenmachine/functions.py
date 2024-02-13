@@ -18,10 +18,6 @@ def stel_vraag(prompt):
     return input(prompt)
 
 
-def verschillende_tekst(tekst):
-    return tekst
-
-
 def actie_kiezen(choice, n1, n2):
     if choice == 'a':
         return optellen(n1, n2)
