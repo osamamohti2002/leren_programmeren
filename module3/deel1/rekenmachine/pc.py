@@ -1,6 +1,6 @@
 from functions import *
 
-nummer1 = True
+
 nummer2 = False
 print("Welkom In onze Rekenmachine")
 vraag = stel_vraag('A) getallen optellen\n'
@@ -40,6 +40,4 @@ while True:
         nummer2 = float(int(stel_vraag(f'welke getal met {choice}')))
     choice = actie_kiezen(vraag, choice, nummer2)
     print(choice)
-
-
 
