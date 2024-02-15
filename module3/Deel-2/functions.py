@@ -5,29 +5,46 @@ from data import JOURNEY_IN_DAYS
 ##################### O03 #####################
 
 def copper2silver(amount:int) -> float:
-    pass
+    aantal_silver = amount * 0.1
+    return aantal_silver
+
+
 def silver2gold(amount:int) -> float:
-    pass
+    aantal_goud = amount * 0.2
+    return aantal_goud
 
 def copper2gold(amount:int) -> float:
-    pass
+    copper_to_gold = amount * 0.02
+    return copper_to_gold
 
 def platinum2gold(amount:int) -> float:
-    pass
+    platinum_to_gold = amount * 25
+    return platinum_to_gold
+
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
+    total_gold = 0
+    
+    total_gold += copper2gold(personCash.get('copper', 0))
+    
+    total_gold += silver2gold(personCash.get('silver', 0))
+    
+    total_gold += personCash.get('gold', 0)
+    
+    total_gold += platinum2gold(personCash.get('platinum', 0))
+    
+    return total_gold
+    
 
-#     conversion_rates = {
+
+
+
+# conversion_rates = {
 #     'platinum': 25,
 #     'gold': 1,
 #     'silver': 0.2,
 #     'copper': 0.1
-# }
-
-
-
-
+#     }
 
 
 
@@ -128,3 +145,7 @@ def ifOne(amount:int, yes:str, no:str, single='een') -> str:
     text = yes if amount == 1 else no
     amount = single if amount == 1 else amount
     return '{} {}'.format(amount, text).lstrip()
+
+
+
+
