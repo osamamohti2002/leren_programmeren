@@ -20,6 +20,7 @@ H) getallen halveren
 first_round = True
 while True:
     vraag = stel_vraag(diensten).lower()
+    nummer2 = 0
     if first_round:
         nummer1 = float(stel_vraag("Welke getal? "))
         diensten += 'I) niks '
@@ -28,10 +29,7 @@ while True:
         print("Einde  van het programma.")
         break
 
-    elif vraag in ['e', 'f', 'g', 'h']:
-        nummer2 = 0
-
-    else:
+    elif vraag in ['a', 'b', 'c', 'd']:
         nummer2 = float(int(stel_vraag(f"Welke getal wil je {vraag} met {nummer1}? ")))
 
     resultaat = actie_kiezen(vraag, nummer1, nummer2)
