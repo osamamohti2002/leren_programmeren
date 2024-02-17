@@ -95,17 +95,53 @@ def getTotalRentalCost(horses: int, tents: int) -> float:
     return total_cost
 ##################### O08 #####################
 
-def getItemsAsText(items:list) -> str:
-    pass
-
-def getItemsValueInGold(items:list) -> float:
-    pass
+def getItemsAsText(items: list) -> str:
+    item_texts = [f"{item['amount']}{item['unit']} {item['name']}" for item in items]
+    if len(item_texts) > 1:
+        return ', '.join(item_texts[:-1]) + ' & ' + item_texts[-1]
+    else:
+        return item_texts[0]
+def getItemsValueInGold(items: list) -> float:
+    total_value = 0
+    for item in items:
+        price_amount = item['price']['amount']
+        item_amount = item['amount']
+        price_type = item['price']['type']
+ 
+        if price_type == 'copper':
+            total_value += copper2gold(price_amount) *  item_amount
+        elif price_type == 'silver':
+            total_value += silver2gold(price_amount) * item_amount
+        elif price_type == 'platinum':
+            total_value += platinum2gold(price_amount) * float(item_amount)
+        else:
+            total_value += price_amount * item_amount
+    return total_value
 
 ##################### O09 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    a = 0
+    for person in people:
+        a += getPersonCashInGold(person['cash'])
+    return round(a, 2)
 
+
+
+    # total_gold_group = 0
+    # for person in people:
+    #     total_gold_group += copper2gold(people.get('copper', 0))
+    #     total_gold_group += silver2gold(people.get('silver', 0))
+    #     total_gold_group += people.get('gold', 0)
+    #     total_gold_group += platinum2gold(people.get('platinum', 0))
+    # return total_gold_group
+    # total_gold_group = 0
+    # total_gold_group += copper2gold(people['cash'].get('copper', 0))
+    # total_gold_group += silver2gold(people['cash'].get('silver', 0))
+    # total_gold_group += people['cash'].get('gold', 0)
+    # total_gold_group += platinum2gold(people['cash'].get('platinum', 0))
+    # return total_gold_group
+    
 ##################### O10 #####################
 
 def getInterestingInvestors(investors:list) -> list:
