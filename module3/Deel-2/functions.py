@@ -128,20 +128,6 @@ def getCashInGoldFromPeople(people:list) -> float:
 
 
 
-    # total_gold_group = 0
-    # for person in people:
-    #     total_gold_group += copper2gold(people.get('copper', 0))
-    #     total_gold_group += silver2gold(people.get('silver', 0))
-    #     total_gold_group += people.get('gold', 0)
-    #     total_gold_group += platinum2gold(people.get('platinum', 0))
-    # return total_gold_group
-    # total_gold_group = 0
-    # total_gold_group += copper2gold(people['cash'].get('copper', 0))
-    # total_gold_group += silver2gold(people['cash'].get('silver', 0))
-    # total_gold_group += people['cash'].get('gold', 0)
-    # total_gold_group += platinum2gold(people['cash'].get('platinum', 0))
-    # return total_gold_group
-    
 ##################### O10 #####################
 
 def getInterestingInvestors(investors:list) -> list:
