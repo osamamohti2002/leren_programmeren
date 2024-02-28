@@ -9,9 +9,9 @@ files = [
     'tha.py',
     'data.py',
     'functions.py',
-    'tests/run_all_tests.py',
-    'tests/test_O01.py',
-    'tests/test_lib.py',
+    'test/run_all_tests.py',
+    'test/test_O01.py',
+    'test/test_lib.py',
 ]
 
 for filepath in files:
