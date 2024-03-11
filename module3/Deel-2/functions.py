@@ -114,11 +114,13 @@ def getCashInGoldFromPeople(people:list) -> float:
 ##################### O10 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    interessante_investors = []
+    interessante_investors = [] # kan filter gebruiken
     for investor in investors:
         if investor['profitReturn'] <= INTERESSANTE_PROFIT_RETURN:
             interessante_investors.append(investor)
     return interessante_investors
+
+
 
 def getAdventuringInvestors(investors:list) -> list:
     interessante_investors = getInterestingInvestors(investors)
@@ -174,8 +176,57 @@ def getAdventurerCut(profitGold: float, investorsCuts: list, fellowship: int) ->
 
 ##################### O14 #####################
 
-def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+def getEarnigs(profitGold: float, mainCharacter: dict, friends: list, investors: list) -> list:
+    people = [mainCharacter] + friends + investors
+    earnings = []
+ 
+    # Haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    interestingInvestors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold, interestingInvestors)
+ 
+    # Bepaal het totaal aantal mensen dat deelnam aan het avontuur
+    totalParticipants = len(adventuringFriends) + len(adventuringInvestors) + len(interestingInvestors) + 1  # mainCharacter
+ 
+    # Verdeel de uitkomsten
+    for person in people:
+        name = person['name']
+        start = getCashInGoldFromPeople([person])
+        end = start
+
+
+        if person == mainCharacter:
+            for friend in friends:
+                end += 10
+        elif person in friends:
+            end -= 10
+        elif person in adventuringInvestors:
+            end += round(person['profitReturn'] / profitGold, 2)
+        
+
+        
+        goldCut = getAdventurerCut(profitGold, investorsCuts, totalParticipants)
+        end += goldCut
+        
+        # if person in adventuringFriends or person in adventuringInvestors or person == mainCharacter:
+        #     goldCut = getAdventurerCut(profitGold, investorsCuts, totalParticipants)
+        #     end += goldCut
+
+
+# wie krijgt wat
+# de maincracter krijgt 10 van vrienden
+#vrienden geven 10 aan maincarachter
+# adventuring investors krijgen hun profitreturn
+# intersting investors
+
+
+        earnings.append({
+            'name': name,
+            'start': round(start, 2),
+            'end': round(end, 2)
+        })
+    return earnings
 
 ##################### view functions #####################
 
