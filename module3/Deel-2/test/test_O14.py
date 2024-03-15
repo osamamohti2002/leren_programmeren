@@ -74,12 +74,18 @@ testarg_friends_test4_5_8 = [{
     }
 }]
 expected = [
-    {'name': 'TestChar1', 'start': 0.0, 'end': 70.0}, 
-    {'name': 'TestFriend1', 'start': 20.0, 'end': 60.0}, 
-    {'name': 'TestFriend2', 'start': 15.0, 'end': 55.0}
+    {'name': 'TestChar1', 'start': 0.0, 'end': 55.62}, 
+    {'name': 'TestFriend1', 'start': 20.0, 'end': 45.62}, 
+    {'name': 'TestFriend2', 'start': 15.0, 'end': 40.62},
+    {'name': 'TestInvestor1', 'start': 125.0, 'end': 168.12}
 ]
 result = getEarnigs(150, testarg_mainCharacter_test1_4_5_6, testarg_friends_test4_5_8, testarg_investors_test3_5_6)
 test('getEarnigs - test 4',expected, result)
+print("----------------------------------")
+
+print(expected)
+print("----------------------------------")
+print(result)
 
 
 expected = [

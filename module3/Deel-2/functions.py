@@ -182,12 +182,13 @@ def getEarnigs(profitGold: float, mainCharacter: dict, friends: list, investors:
  
     # Haal de juiste inhoud op
     adventuringFriends = getAdventuringFriends(friends)
-    interestingInvestors = getInterestingInvestors(investors)
     adventuringInvestors = getAdventuringInvestors(investors)
-    investorsCuts = getInvestorsCuts(profitGold, interestingInvestors)
+    interestingInvestors = getInterestingInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold, investors)
  
     # Bepaal het totaal aantal mensen dat deelnam aan het avontuur
-    totalParticipants = len(adventuringFriends) + len(adventuringInvestors) + len(interestingInvestors) + 1  # mainCharacter
+    totalParticipants = len(adventuringFriends) + len(adventuringInvestors) + 1  # mainCharacter
+    profitgold_delen = getAdventurerCut(profitGold, investorsCuts, totalParticipants)
  
     # Verdeel de uitkomsten
     for person in people:
@@ -197,29 +198,20 @@ def getEarnigs(profitGold: float, mainCharacter: dict, friends: list, investors:
 
 
         if person == mainCharacter:
-            for friend in friends:
-                end += 10
-        elif person in friends:
+            end += 10 * len(adventuringFriends)
+            end += profitgold_delen
+            
+        elif person in adventuringFriends:
+            end += profitgold_delen
             end -= 10
-        elif person in adventuringInvestors:
-            end += round(person['profitReturn'] / profitGold, 2)
-        
-
-        
-        goldCut = getAdventurerCut(profitGold, investorsCuts, totalParticipants)
-        end += goldCut
-        
-        # if person in adventuringFriends or person in adventuringInvestors or person == mainCharacter:
-        #     goldCut = getAdventurerCut(profitGold, investorsCuts, totalParticipants)
-        #     end += goldCut
 
 
-# wie krijgt wat
-# de maincracter krijgt 10 van vrienden
-#vrienden geven 10 aan maincarachter
-# adventuring investors krijgen hun profitreturn
-# intersting investors
+        elif person in interestingInvestors:
+            end += round(profitGold / 100 * person['profitReturn'] , 2) 
 
+
+        if person in adventuringInvestors:
+            end += profitgold_delen
 
         earnings.append({
             'name': name,
