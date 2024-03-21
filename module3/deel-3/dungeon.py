@@ -34,6 +34,7 @@ class rooms:
         return awnser
 
     def room1(self):
+        print("room1")
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.get_previous_room() == False:
@@ -45,6 +46,8 @@ class rooms:
         return answer
 
     def room2(self):
+        print("room2")
+
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.get_previous_room() == '8':
@@ -102,6 +105,8 @@ class rooms:
         return answer
 
     def room3(self):
+        print("room3")
+
         answer = self.DEFAULT_ROOM_ANSWER
             
         if self.route.get_previous_room() == '8':
@@ -142,6 +147,7 @@ class rooms:
         return answer
 
     def room4(self):
+        print("room4")
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.get_previous_room() == '1':
@@ -172,6 +178,7 @@ class rooms:
         return answer
 
     def room5(self):
+        print("room5")
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.get_previous_room() == '7':
@@ -201,6 +208,7 @@ class rooms:
 
 
     def room6(self):
+        print("room6")
         answer = self.DEFAULT_ROOM_ANSWER
         sharts = False
         crystat_type = ''
@@ -277,6 +285,7 @@ class rooms:
 
 
     def room7(self):
+        print("room7")
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.get_previous_room() == '1':
@@ -300,6 +309,7 @@ class rooms:
         return answer
 
     def room8(self):
+        print("room8")
         answer = self.DEFAULT_ROOM_ANSWER
         
         if self.route.get_previous_room() == '5':
@@ -320,6 +330,7 @@ class rooms:
 
 
     def room9(self):
+        print("room9")
         answer = self.DEFAULT_ROOM_ANSWER
         lowerlevel = False
         
@@ -384,6 +395,7 @@ class rooms:
         return answer
 
     def room10(self):
+        print("room10")
         answer = self.DEFAULT_ROOM_ANSWER
 
         if self.route.roomanswers.count(self.DEFAULT_ROOM_ANSWER) == 0:
