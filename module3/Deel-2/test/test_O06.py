@@ -22,7 +22,9 @@ testarg_list_alltests = [{
         'name' : 'Soccerball',
         'tasty' : False,
         'round' : True
-    }]
+        
+    }
+    ]
 
 expected = [{
         'name' : 'Pie',

@@ -1,6 +1,6 @@
 import time
 from termcolor import colored
-from math import ceil
+from math import ceil, floor
 from data import JOURNEY_IN_DAYS,COST_FOOD_HORSE_COPPER_PER_DAY, COST_FOOD_HUMAN_COPPER_PER_DAY, COST_HORSE_SILVER_PER_DAY, COST_TENT_GOLD_PER_WEEK, COST_INN_HUMAN_SILVER_PER_NIGHT ,COST_INN_HORSE_COPPER_PER_NIGHT 
 
 INTERESSANTE_PROFIT_RETURN = 10
@@ -39,11 +39,11 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 
 ##################### O06 #####################
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    friends = []
+    filterd_list = []
     for item in list:
-        if item.get(key) == value:
-            friends.append(item)
-    return friends
+        if key in item and item[key] == value:
+            filterd_list.append(item)
+    return filterd_list
 
 def getAdventuringPeople(people:list) -> list:
     return getFromListByKeyIs(people, 'adventuring', True)
@@ -53,13 +53,9 @@ def getShareWithFriends(friends:list) -> list:
 
 
 def getAdventuringFriends(friends:list) -> list:
-    adventuring_friends = []
     adventuring_people = getAdventuringPeople(friends)
-    share_with_friends = getShareWithFriends(friends)
-    for friend in adventuring_people:
-        if friend in share_with_friends:
-            adventuring_friends.append(friend)
-    return adventuring_friends   
+    share_with_friends = getShareWithFriends(adventuring_people)
+    return share_with_friends   
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
@@ -69,7 +65,7 @@ def getNumberOfTentsNeeded(people:int) -> int:
     return ceil(people / 3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    total_cost_horses = (horses * COST_HORSE_SILVER_PER_DAY / 5) * JOURNEY_IN_DAYS
+    total_cost_horses = silver2gold((horses * COST_HORSE_SILVER_PER_DAY ) * JOURNEY_IN_DAYS)
     total_cost_tents = (tents * COST_TENT_GOLD_PER_WEEK ) * ceil(JOURNEY_IN_DAYS / 7)
     return total_cost_horses + total_cost_tents
 
@@ -140,13 +136,10 @@ def getTotalInvestorsCosts(investors: list, Gear: list) -> float:
 ##################### O11 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold: float, people: int, horses: int) -> int:
-    total_nights = 0
-    while True:
-        cost_in_gold = getJourneyInnCostsInGold(total_nights, people, horses)
-        if cost_in_gold > leftoverGold:
-            break
-        total_nights += 1
-    return total_nights - 1
+    cost_in_gold_night = getJourneyInnCostsInGold(1, people, horses) 
+    aantal_dagen = floor(leftoverGold / cost_in_gold_night)
+
+    return aantal_dagen
 
 def getJourneyInnCostsInGold(nightsInInn: int, people: int, horses: int) -> float:
     total_cost_silver = nightsInInn * COST_INN_HUMAN_SILVER_PER_NIGHT * people
