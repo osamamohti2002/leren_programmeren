@@ -23,7 +23,7 @@ def input_nr_persons(prompt: str) -> int:
 
 
 def round_piece(amount: float) -> int:
-  pass
+  return ceil(amount)
 
 # returns amount rounded to the closest decimals: .00 or .25 or .50 or 0.75 unless amount >= 10
 def round_quarter(amount: float) -> float:

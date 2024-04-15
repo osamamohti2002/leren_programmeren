@@ -2,9 +2,6 @@ import string
 import random
 import time
 
-
-
-
 num_capitals = random.randint(2, 6)
 num_numbers = random.randint(4, 7)
 num_chars = 3
@@ -51,7 +48,7 @@ for _ in range(1000):
 
 einde = round(time.time() * 1000)
 
-# print(einde - start)
+print(f"------- {einde - start}-------")
 
 
 print(password)
