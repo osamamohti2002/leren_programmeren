@@ -1,17 +1,17 @@
 from recipe_lib import *
 # for the recipe frittate (spaanse omelet)
 # ingredient descriptions in singular|plural
-TXT_EGGS = 'groot ei|grote eieren'
+TXT_EGGS = 'groot_ei | grote_eieren'
 TXT_MILK = 'melk'
 TXT_SALT = 'keukenzout'
 TXT_PEPPER = 'gemalen zwarte peper'
 TXT_OIL = 'olijfolie'
-TXT_ONIONS = 'kleine ui|kleine uien'
-TXT_GARLICS = 'teentje knoflook|teentjes knoflook'
-TXT_PAPRIKAS = 'paprika|paprika\'s' 
+TXT_ONIONS = 'kleine_ui | kleine_uien'
+TXT_GARLICS = 'teentje_knoflook | teentjes_knoflook'
+TXT_PAPRIKAS = 'paprika | paprika\'s' 
 TXT_SPINACH = 'spinazie'
 TXT_CHEESE = 'geraspte cheddar kaas'
-TXT_PERSONS = 'persoon|personen'
+TXT_PERSONS = 'persoon | personen'
 
 # ingredient quantities and units
 AMOUNT_EGGS = 7

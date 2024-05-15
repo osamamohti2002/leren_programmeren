@@ -17,7 +17,7 @@ amount_eggs = round_piece(AMOUNT_EGGS * factor)
 
 # calculate amount_milk
 amount_milk = round_quarter(AMOUNT_MILK * factor)
-print(AMOUNT_MILK * factor)
+
 # calculate amount_salt
 amount_salt = round_quarter(AMOUNT_SALT * factor)
 
@@ -49,7 +49,7 @@ print('=============== Frittata recept ===============')
 print(f'Ingrediënten voor {nr_persons} personen:')
 print('-----------------------------------------------')
 
-print(f"* {amount_eggs} {TXT_EGGS}")
+print(f"* {amount_eggs} {str_single_plural(amount_eggs, TXT_EGGS)}")
 # calculate amount_milk
 print(f'* {amount_milk} {UNIT_CUPS} {TXT_MILK}')
 # calculate amount_salt
@@ -76,3 +76,5 @@ print('-----------------------------------------------')
 
 
 
+test = str_single_plural(amount_paprikas, TXT_OIL)
+print(f'dit id str_single_plural() f{test}')
