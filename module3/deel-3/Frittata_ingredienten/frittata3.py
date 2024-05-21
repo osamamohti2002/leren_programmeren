@@ -46,29 +46,18 @@ amount_cheese = round_quarter(AMOUNT_CHEESE * factor)
 
 # -------- OUTPUT -------
 print('=============== Frittata recept ===============')
-print(f'Ingrediënten voor {nr_persons} {str_single_plural(nr_persons, TXT_PERSONS)}:')
+print(f'Ingrediënten voor {nr_persons} {str_single_plural("",TXT_PERSONS)}:')
 print('-----------------------------------------------')
-
-print(f"* {amount_eggs} {str_single_plural(amount_eggs, TXT_EGGS)}")
-# calculate amount_milk
-print(f'* {str_amount_fraction(amount_milk)} {UNIT_CUPS} {TXT_MILK}')
-# calculate amount_salt
-print(f"* {str_amount_fraction(amount_salt)} {UNIT_TEASPOONS} {TXT_SALT}")
-# calculate amount_pepper
-print(f"* {str_amount_fraction(amount_pepper)} {UNIT_TEASPOONS} {TXT_PEPPER}")
-# calculate amount_oil
-print(f"* {str_amount_fraction(amount_oil)} {UNIT_SPOONS} {TXT_OIL}")
-# calculate amount_onions
-print(f'* {amount_onions} {str_single_plural(amount_onions, TXT_ONIONS)}')
-# calculate amount_garlics
-print(f'* {amount_garlics} {str_single_plural(amount_garlics, TXT_GARLICS)}')
-# calculate amount_paprikas
-print(f'* {amount_paprikas} {str_single_plural(amount_paprikas, TXT_PAPRIKAS)}')
-# calculate amount_spinach
-print(f'* {str_amount_fraction(amount_spinach)} {UNIT_CUPS} {TXT_SPINACH}')
-# calculate amount_cheese
-print(f"* {str_amount_fraction(amount_cheese)} {str_single_plural(amount_cheese, TXT_CUPS)} {TXT_CHEESE}")
-# print (formatted) all amounts and units combined with their ingrediënt descriptions
+print(f"{amount_eggs} {str_units(amount_eggs, UNIT_EGGS)} {str_single_plural(amount_eggs, TXT_EGGS)}")
+print(f"{str_amount_fraction(amount_milk)} {str_units(amount_milk, UNIT_MILK)} {TXT_MILK} ({unit2ml(amount_milk, UNIT_MILK)})")
+print(f"{str_amount_fraction(amount_salt)} {str_units(amount_salt, UNIT_SALT)} {TXT_SALT} ({ml2gram(amount_salt, GRAM_PER_ML_CHEESE)})")
+print(f"{str_amount_fraction(amount_pepper)} {str_units(amount_pepper, UNIT_SALT)} {TXT_PEPPER}")
+print(f"{str_amount_fraction(amount_oil)} {str_units(amount_oil, UNIT_OIL)} {TXT_OIL} ({unit2ml(amount_oil, UNIT_OIL)})")
+print(f"{amount_onions} {str_units(amount_onions, UNIT_ONIONS)} {str_single_plural(amount_onions, TXT_ONIONS)}")
+print(f"{amount_garlics} {str_units(amount_garlics, UNIT_GARLICS)} {str_single_plural(amount_garlics, TXT_GARLICS)}")
+print(f"{amount_paprikas} {str_units(amount_paprikas, UNIT_PAPRIKAS)} {str_single_plural(amount_paprikas, TXT_PAPRIKAS)}")
+print(f"{str_amount_fraction(amount_spinach)} {str_units(amount_spinach, UNIT_SPINACH)} {TXT_SPINACH}")
+print(f"{str_amount_fraction(amount_cheese)} {str_units(amount_cheese, UNIT_CHEESE)} {TXT_CHEESE}")
 print('-----------------------------------------------')
 
 

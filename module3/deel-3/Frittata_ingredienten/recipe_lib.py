@@ -7,9 +7,9 @@ UNIT_TEASPOONS = 'teaspoon'
 UNIT_CUPS = 'cup'
 
 TXT_PIECES = '|'
-TXT_SPOONS = 'eetlepel | eetlepels'
-TXT_TEASPOONS = 'theelepel | theelepels'
-TXT_CUPS = 'kopje | kopjes'
+TXT_SPOONS = 'eetlepel|eetlepels'
+TXT_TEASPOONS = 'theelepel|theelepels'
+TXT_CUPS = 'kopje|kopjes'
 
 # failsafe input of a number of persons
 def input_nr_persons(prompt: str) -> int:
@@ -31,30 +31,35 @@ def round_quarter(amount: float) -> float:
     if amount > 10:
         return round(amount)    
     else:
-        if amount < 0.25:
-          return 0.25
-        remainder = amount % 0.25
-        if remainder < 0.125:
-            return amount - remainder
+        rounded_amount = round(amount * 4) / 4
+        if rounded_amount < 0.25:
+            return 0.25
+        return rounded_amount
 
-        else:
-            return amount + (0.25 - remainder)
 
 # returns single or plural description of a string 'single desciption|plural description' 
 # depending on amount
 def str_single_plural(amount: float, txt: str) -> str:
-    splits_txt = txt.split()
-    if amount <= 1:
-        txt = splits_txt[0]
+    splits_txt = txt.split('|')
+    if amount == 1:
+        return splits_txt[0]
     else:
-        txt = splits_txt[-1]
-
-    return txt
+        return splits_txt[-1]
 
 
 # returns description of single or plural units
 def str_units(amount: float, unit: str) -> str:
-  pass
+    if unit == UNIT_SPOONS:
+        return str_single_plural(amount, TXT_SPOONS)
+    elif unit == UNIT_TEASPOONS:
+        return str_single_plural(amount, TXT_TEASPOONS)
+    elif unit == UNIT_CUPS:
+        return str_single_plural(amount, TXT_CUPS)
+    elif unit == UNIT_PIECES:
+        return str_single_plural(amount, TXT_PIECES)
+    else:
+        return f"{amount} {unit}"
+
 
 
 # returns amount in string with 1/4 or 1/2 or 3/4
@@ -73,13 +78,14 @@ ML_TEASPOON = 5 # one teaspoon contains 5 ml
 ML_CUP = 240 # one cup contains 240 ml
 
 def unit2ml(amount: float, unit: str) -> float:
-    print(amount)
     if unit == UNIT_SPOONS:
-        return amount * ML_SPOON
+        return round(amount * ML_SPOON, 1)
     elif unit == UNIT_TEASPOONS:
-        return amount * ML_TEASPOON
+        return round(amount * ML_TEASPOON, 1)
     elif unit == UNIT_CUPS:
-        return amount * ML_CUP
+        return round(amount * ML_CUP, 1)
+    else:
+        return 0
 # average densities in gram per ml for common ingredients, to calculate weight(gram) from milliliters(ml)
 # 1ml of salt weighs 1.2 gram 
 GRAM_PER_ML_SALT = 1.2
