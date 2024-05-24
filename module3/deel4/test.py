@@ -16,16 +16,11 @@ VAT_CODE_L = 'L'
 # ***************** INPUT *****************
 print("SPEELHAL-ENTREE-KASSA")
 answer = input_yes_no('Wilt u bestellen? ')
-if not YES_NO_OPTIONS:
-  print('Alleen een optie uit: J of j of N of n')
 
 exit('Nu geen interesse? Tot ziens!') if answer in NO_OPTIONS else print('Ik ga u nu vragen wat en hoeveel u wilt...')
 
 nr_tickets = input_int("Hoeveel personen?\n", 1, MAX_TICKETS)
-
 answer = input_yes_no("Ook VR-VIP seats?(J/N)\n")
-if not YES_NO_OPTIONS:
-  print('Alleen een optie uit: J of j of N of n')
 
 vr_vip_ordered = answer in YES_OPTIONS
 
@@ -40,8 +35,6 @@ nr_cola = input_int("Hoeveel Cola?\n", 0, nr_tickets)
 nr_popcorn = input_int("Hoeveel popcorn?\n", 0, nr_tickets)
 
 answer = input_yes_no("Wilt u een factuur met BTW specificatie?(J/N)\n")
-if not YES_NO_OPTIONS:
-  print('Alleen een optie uit: J of j of N of n')
 
 vat_invoice = answer in YES_OPTIONS
 if vat_invoice:
