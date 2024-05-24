@@ -15,29 +15,29 @@ VAT_CODE_L = 'L'
 
 # ***************** INPUT *****************
 print("SPEELHAL-ENTREE-KASSA")
-answer = input_yes_no('Wilt u bestellen? (j/n)')
+answer = input_yes_no('Wilt u bestellen? ')
 if not YES_NO_OPTIONS:
   print('Alleen een optie uit: J of j of N of n')
 
 exit('Nu geen interesse? Tot ziens!') if answer in NO_OPTIONS else print('Ik ga u nu vragen wat en hoeveel u wilt...')
 
-nr_tickets = (input_int("Hoeveel personen?", 1, MAX_TICKETS))
+nr_tickets = input_int("Hoeveel personen?\n", 1, MAX_TICKETS)
 
-answer = input_yes_no("Ook VR-VIP seats?(J/N)")
+answer = input_yes_no("Ook VR-VIP seats?(J/N)\n")
 if not YES_NO_OPTIONS:
   print('Alleen een optie uit: J of j of N of n')
 
 vr_vip_ordered = answer in YES_OPTIONS
 
 if vr_vip_ordered:
-  nr_vr_vip_seats = input_int("hoeveel VR-VIP seats?", 1, nr_tickets)
-  vr_vip_seat_time = (input_int("hoeveel minuten in de VR-VIP-seats?", 5, MAX_VR_VIP_SEAT_TIME))
+  nr_vr_vip_seats = input_int("hoeveel VR-VIP seats?\n", 1, nr_tickets)
+  vr_vip_seat_time = input_int("hoeveel minuten in de VR-VIP-seats?\n", 5, MAX_VR_VIP_SEAT_TIME)
 else:
   nr_vr_vip_seats = 0
   vr_vip_seat_time = 0
 
-nr_cola = input_int("Hoeveel Cola?", 0, nr_tickets)
-nr_popcorn = input_int("Hoeveel popcorn?", 0, nr_tickets)
+nr_cola = input_int("Hoeveel Cola?\n", 0, nr_tickets)
+nr_popcorn = input_int("Hoeveel popcorn?\n", 0, nr_tickets)
 
 answer = input_yes_no("Wilt u een factuur met BTW specificatie?(J/N)\n")
 if not YES_NO_OPTIONS:
@@ -45,12 +45,12 @@ if not YES_NO_OPTIONS:
 
 vat_invoice = answer in YES_OPTIONS
 if vat_invoice:
-   company_name = input('Op welke bedrijfsnaam komt de factuur?').strip()
-   if len(company_name) == 0:
-     company_name = '........... (zelf invullen)'
+  company_name = input('Op welke bedrijfsnaam komt de factuur?\n').strip()
+  if len(company_name) == 0:
+    company_name = '........... (zelf invullen)'
 
 # ***************** CALCULATION *****************
-total_tickets = round(nr_tickets * TICKET_PRICE,2)
+total_tickets = round(nr_tickets * TICKET_PRICE, 2)
 vr_vip_seat_price = vr_vip_seat_time / VR_VIP_SEAT_PRICE_PERIOD * VR_VIP_SEAT_PERIOD_PRICE
 total_vr_vip_seats = round(nr_vr_vip_seats * vr_vip_seat_price, 2)
 total_cola = round(nr_cola * COLA_PRICE, 2)
@@ -66,10 +66,11 @@ if vat_invoice:
   total_vat_L = total_cola_ex_vat + total_popcorn_ex_vat
   total_vat = total_vat_H + total_vat_L
 
+# ***************** OUTPUT *****************
 receipt_text = RECEIPT_TEXT.format(personen = nr_tickets)
 print(receipt_text+'\n')
 
-print(f'Factuur voor: {company_name}') if vat_invoice else print(f'Kassabon')
+print(f'Factuur voor: {company_name}') if vat_invoice else print('Kassabon')
 print('-'*len(receipt_text))
 print(f'Tickets                   {nr_tickets:2} x {TICKET_PRICE:2.2f} = {total_tickets:6.2f}')
 print(f'VR-vip-seats  {vr_vip_seat_time:3} minuten {nr_vr_vip_seats:2} x {vr_vip_seat_price:2.2f} = {total_vr_vip_seats:6.2f}')
